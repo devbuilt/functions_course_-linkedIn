@@ -26,14 +26,42 @@ calc.plus(4, 5);
 
 //Invoking instances through the constructor
 
+// let Dog = function () {
+// 	let name, breed;
+// 	return console.dir(this);
+// }
+//
+// firstDog = new Dog;
+// firstDog.name = "Roover";
+// firstDog.breed = "Doberman";
+//
+// secondDog = new Dog;
+// secondDog.name = "Nova";
+// secondDog.breed = "Yorkie";
+
+//Expanding functionality through prototype
+let speak = function(sayWhat){
+	console.log(sayWhat);
+}
+
 let Dog = function () {
 	let name, breed;
-	return console.dir(this);
-}
+
+};
+let Cat = function () {
+	let name, breed;
+
+};
+
+Dog.prototype.speak = speak;
+Cat.prototype.speak = speak;
 
 firstDog = new Dog;
 firstDog.name = "Roover";
 firstDog.breed = "Doberman";
-secondDog = new Dog;
-secondDog.name = "Nova";
-secondDog.breed = "Yorkie";
+firstDog.speak("Woooffff");
+
+firstCat = new Cat;
+firstCat.name = "Miles";
+firstCat.breed = "Liger";
+firstCat.speak("Meow");
