@@ -1,5 +1,8 @@
 function plus(a,b) {
-let sum = a + b;
-	return sum;
+return (
+	console.log(a+b),
+	console.log(this),
+	console.log(arguments)
+)
 };
-document.write(plus(5,6));
+plus(5,6);
