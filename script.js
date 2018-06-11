@@ -8,7 +8,7 @@ return (
 plus(5,6);
 
 
-//
+//using functions as objects
 
 var calc = {
 	status : 'Awesome',
@@ -22,3 +22,16 @@ var calc = {
 	}
 }
 calc.plus(4,5);
+
+
+//Invoking instances through the constructor
+
+let Dog = function() {
+	let name, breed;
+}
+
+firstDog = new Dog;
+firstDog.name = "Roover";
+firstDog.breed = "Yorkie";
+
+console.log(firstDog.name);
