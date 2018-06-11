@@ -28,10 +28,13 @@ calc.plus(4,5);
 
 let Dog = function() {
 	let name, breed;
+	return console.dir(this);
 }
 
 firstDog = new Dog;
 firstDog.name = "Roover";
-firstDog.breed = "Yorkie";
+firstDog.breed = "Doberman";
+secondDog = new Dog;
+secondDog.name = "Nova";
+secondDog.breed = "Yorkie";
 
-console.log(firstDog.name);
