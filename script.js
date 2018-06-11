@@ -75,4 +75,4 @@ let speak = function(what){
 
 let saySomething = {normal:'meow',  love: 'purr'}
 speak.call(saySomething);
-speak('moof');
+//speak.apply(saySomething, ['meouff']); you can pass array wit apply
