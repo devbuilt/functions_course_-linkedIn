@@ -32,17 +32,17 @@ let Dog = function () {
 }
 
 firstDog = new Dog;
-firstDog.name = "Roover";
-firstDog.breed = "Doberman";
+firstDog.name = 'Roover';
+firstDog.breed = 'Doberman';
 
 secondDog = new Dog;
-secondDog.name = "Nova";
-secondDog.breed = "Yorkie";
+secondDog.name = 'Nova';
+secondDog.breed = 'Yorkie';
 
 //Expanding functionality through prototype
 let speak = function(sayWhat){
 	console.log(sayWhat);
-}
+};
 
 let Dog = function () {
 	let name, breed;
@@ -57,11 +57,22 @@ Dog.prototype.speak = speak;
 Cat.prototype.speak = speak;
 
 firstDog = new Dog;
-firstDog.name = "Roover";
-firstDog.breed = "Doberman";
-firstDog.speak("Woooffff");
+firstDog.name = 'Roover';
+firstDog.breed = 'Doberman';
+firstDog.speak('Woooffff');
 
 firstCat = new Cat;
-firstCat.name = "Miles";
-firstCat.breed = "Liger";
-firstCat.speak("Meow");
+firstCat.name = 'Miles';
+firstCat.breed = 'Liger';
+firstCat.speak('Meow');
+
+//Understanding call-and-apply invocation
+
+let speak = function(what){
+	console.log(this.love);
+	console.log(this.normal);
+}
+
+let saySomething = {normal:'meow',  love: 'purr'}
+speak.call(saySomething);
+speak('moof');
