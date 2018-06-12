@@ -44,35 +44,47 @@ let speak = function(sayWhat){
 	console.log(sayWhat);
 };
 
-let Dog = function () {
+let Dog1 = function () {
 	let name, breed;
 
 };
-let Cat = function () {
+let Cat1 = function () {
 	let name, breed;
 
 };
 
-Dog.prototype.speak = speak;
-Cat.prototype.speak = speak;
+Dog1.prototype.speak = speak;
+Cat1.prototype.speak1 = speak;
 
-firstDog = new Dog;
-firstDog.name = 'Roover';
-firstDog.breed = 'Doberman';
-firstDog.speak('Woooffff');
+firstDog1 = new Dog1;
+firstDog1.name = 'Roover';
+firstDog1.breed = 'Doberman';
+firstDog1.speak('Woooffff');
 
-firstCat = new Cat;
-firstCat.name = 'Miles';
-firstCat.breed = 'Liger';
-firstCat.speak('Meow');
+firstCat1 = new Cat1;
+firstCat1.name = 'Miles';
+firstCat1.breed = 'Liger';
+firstCat1.speak1('Meow');
 
 //Understanding call-and-apply invocation
 
-let speak = function(what){
+let speak1 = function(what){
 	console.log(this.love);
 	console.log(this.normal);
 }
 
 let saySomething = {normal:'meow',  love: 'purr'}
-speak.call(saySomething);
+speak1.call(saySomething);
 //speak.apply(saySomething, ['meouff']); you can pass array wit apply
+
+
+
+// Using the arguments parameter
+let plus1 = function() {
+	let sum = 0;
+for (let i = arguments.length -1; i >= 0; i--) {
+	sum += arguments[i];
+	}
+	return sum;
+}
+console.log(plus1(2,2,2,3));
