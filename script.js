@@ -80,7 +80,7 @@ speak1.call(saySomething);
 
 
 // Using the arguments parameter
-let plus1 = function() {
+let plus1 = function(number1,number2) {
 	let sum = 0;
 for (let i = arguments.length -1; i >= 0; i--) {
 	sum += arguments[i];
