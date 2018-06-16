@@ -113,14 +113,24 @@ myDog();
 
 let ray11 = (function(){
 	let DEFUALTS = {
-		say: 'hello'
+		say: 'hello',
+		speed: 'normal'
+
 	}
 	return {
 		speak: function() {
 			let myArguments = arguments[0] || '';
 			let statement = myArguments.say || DEFUALTS.say;
-			console.log('it works');
+			console.log(statement);
+			return this;
 
+		},
+		//Chaining module method calls
+		run: function (){
+				let myArguments = arguments[0] || '';
+				let running = myArguments.speed || DEFUALTS.speed;
+				console.log('running...' + running);
+				return this;
 		}
 
 	};
