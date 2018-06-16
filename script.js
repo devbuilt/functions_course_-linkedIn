@@ -100,3 +100,25 @@ var iKnow = function(){
 (function(){
 	console.log('foo');
 })();
+
+//Understanding hoisting and variable scope
+
+function myDog(){
+	var dogName = 'Fido';
+		console.log(dogName + ' says Woooffff');
+}
+myDog();
+
+//Creating and namespacing modules
+
+let ray11 = (function(){
+
+	return {
+		speak: function() {
+			console.log('hello');
+
+		}
+
+	};
+
+})();
