@@ -112,10 +112,14 @@ myDog();
 //Creating and namespacing modules
 
 let ray11 = (function(){
-
+	let DEFUALTS = {
+		say: 'hello'
+	}
 	return {
 		speak: function() {
-			console.log('hello');
+			let myArguments = arguments[0] || '';
+			let statement = myArguments.say || DEFUALTS.say;
+			console.log('it works');
 
 		}
 
