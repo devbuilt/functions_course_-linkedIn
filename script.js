@@ -88,3 +88,15 @@ for (let i = arguments.length -1; i >= 0; i--) {
 	return sum;
 }
 console.log(plus1(2,2,2,3));
+
+
+//Using anonymous closures
+var iKnow = function(){
+	console.log('foo');
+
+}();
+
+// self exctuing function
+(function(){
+	console.log('foo');
+})();
