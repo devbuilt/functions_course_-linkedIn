@@ -1,7 +1,7 @@
 const companies = [
 
     { name: "Company One", category: "Finance", start: "1981", end: "2003" },
-    { name: "Company Two", category: "Retail", start: "1980", end: "2008" },
+    { name: "Company Two", category: "Retail", start: "1980", end: "2009" },
     { name: "Company Three", category: "Auto", start: "1987", end: "2007" },
     { name: "Company Four", category: "Technology", start: "1984", end: "2010" },
     { name: "Company Five", category: "Finance", start: "2009", end: "2014" },
@@ -158,4 +158,45 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 
 
+
+
+/*<------------------------------------------------------- Reduce ---------------------------------->*/
+
 //Reduce
+
+
+//for loop example 
+// var agesSum = 0;
+// for(let i = 0; i < ages.length; i++){
+//     agesSum += ages[i]
+
+// }
+
+// console.log(agesSum);
+
+//ES5 reduce
+// const ageSum = ages.reduce(function(total,age){
+//     return total + age;
+
+// }, 0);
+// console.log(ageSum)
+
+//ES6 Short hand
+// const ageSum = ages.reduce((total,age) => total + age)
+// console.log(ageSum)
+
+//ES6 With Arrow Function
+// const ageSum = ages.reduce((total,age) => total + age, 0);
+// console.log(ageSum)
+
+//ES5 Get Total Years all companies
+const totalYearsCompanies = companies.reduce(function(total,company){
+    return total + (company.end - company.start);
+
+},0);
+console.log(totalYearsCompanies)
+
+//ES6Get total years for all companies 
+// const totalYearsCompanies = companies.reduce((total,company) => total +  (company.end - company.start),0)
+// console.log(totalYearsCompanies)
+/*<------------------------------------------------------- End Reduce ---------------------------------->*/
