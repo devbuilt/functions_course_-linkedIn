@@ -107,10 +107,21 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
 // console.log(testMap)
 
-//ES6 Squre Rote Ages Array
-const agesSquareRoot = ages.map(age => Math.sqrt(age));
+//ES6 Square Root Ages Array
+// const agesSquareRoot = ages.map(age => Math.sqrt(age));
+// console.log(agesSquareRoot);
 
-console.log(agesSquareRoot)
+// ES6 Multiply ages by 2
+// const agesTimesTwo = ages.map(age => age * 2);
+// console.log(agesTimesTwo);
+
+//ES6 how to use map multiple times Square Root & Ages Array joined 
+const agesSquare = ages
+        .map(age => Math.sqrt(age))
+        .map(age => age * 2)
+        
+console.log(agesSquare)
+
 
 /*<-------------------------------------------------------End Map ---------------------------------->*/
 
