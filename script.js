@@ -14,6 +14,9 @@ const companies = [
 
 const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
+
+/*<------------------------------------------------------- ForEach ---------------------------------->*/
+
 // for(let i = 0; i < companies.length; i++ ){
 //     console.log(companies[i])
 
@@ -24,6 +27,11 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // companies.forEach(function(company){
 // console.log(company.name);
 // });
+/*<------------------------------------------------------- End ForEach ---------------------------------->*/
+
+
+
+
 
 /*<------------------------------------------------------- Filter ---------------------------------->*/
 
@@ -72,7 +80,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // console.log(lastedTenYears);
 
 
-/*<------------------------------------------------------- End Filter ---------------------------------->*/
+/*<-------------------------------------------------- End Filter ---------------------------------->*/
 
 
 
@@ -96,10 +104,15 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // console.log(testMap)
 
 // ES6 with ES6 Templeate String
-const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`)
-console.log(testMap)
+// const testMap = companies.map(company => `${company.name} [${company.start} - ${company.end}]`);
+// console.log(testMap)
 
+//ES6 Squre Rote Ages Array
+const agesSquareRoot = ages.map(age => Math.sqrt(age));
 
+console.log(agesSquareRoot)
+
+/*<-------------------------------------------------------End Map ---------------------------------->*/
 
 
 //Sort
