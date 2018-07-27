@@ -190,13 +190,25 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // console.log(ageSum)
 
 //ES5 Get Total Years all companies
-const totalYearsCompanies = companies.reduce(function(total,company){
-    return total + (company.end - company.start);
+// const totalYearsCompanies = companies.reduce(function(total,company){
+//     return total + (company.end - company.start);
 
-},0);
-console.log(totalYearsCompanies)
+// },0);
+// console.log(totalYearsCompanies)
 
 //ES6Get total years for all companies 
 // const totalYearsCompanies = companies.reduce((total,company) => total +  (company.end - company.start),0)
 // console.log(totalYearsCompanies)
 /*<------------------------------------------------------- End Reduce ---------------------------------->*/
+
+
+
+/*<------------------------------------- Combined Methods = Map, Filter, forEach, Reduce ---------------------------------->*/
+
+const combined = ages
+        .map(age => age * 2)
+        .filter(age => age >= 40)
+        .sort((a,b)=> a - b)
+        .reduce((a, b) => a + b, 0)// Works this way as well .reduce((a,b) => a + b)
+
+console.log(combined);
