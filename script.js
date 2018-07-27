@@ -116,16 +116,46 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // console.log(agesTimesTwo);
 
 //ES6 how to use map multiple times Square Root & Ages Array joined 
-const agesSquare = ages
-        .map(age => Math.sqrt(age))
-        .map(age => age * 2)
+// const agesMap = ages
+//         .map(age => Math.sqrt(age))
+//         .map(age => age * 2)
         
-console.log(agesSquare)
-
-
+// console.log(agesMap)
 /*<-------------------------------------------------------End Map ---------------------------------->*/
 
 
-//Sort
+
+/*<-------------------------------------------------------Sort ---------------------------------->*/
+
+//Sort ES5 
+// const sortedCompanies = companies.sort(function(c1, c2){
+
+//     if(c1.category > c2.category){
+//         return 1;
+
+//     }else{
+//         return -1;
+//     }
+// });
+
+// console.log(sortedCompanies);
+
+
+//SORT ES6  ? means condition and : means else
+// const sortedCompanies = companies.sort((a,b) => a.start > b.start ? 1 : - 1 );
+
+// console.log(sortedCompanies)
+
+
+//Sort Ages  ES6 Accending order
+// const sortAges = ages.sort((a,b) => a - b);
+
+// Sort Ages ES6 Decending Order
+// const sortAges = ages.sort((a,b) => b - a);
+// console.log(sortAges)
+
+/*<-------------------------------------------------------End Sort---------------------------------->*/
+
+
 
 //Reduce
