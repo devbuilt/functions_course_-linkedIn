@@ -62,6 +62,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 //         return true;
 //     }
 // })
+// console.log(companies)
 
 // //Filter ES6 Companies with retail
 // const RetailCompanies = companies.filter(company => company.category === "Retail");
@@ -205,10 +206,86 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 /*<------------------------------------- Combined Methods = Map, Filter, forEach, Reduce ---------------------------------->*/
 
-const combined = ages
-        .map(age => age * 2)
-        .filter(age => age >= 40)
-        .sort((a,b)=> a - b)
-        .reduce((a, b) => a + b, 0)// Works this way as well .reduce((a,b) => a + b)
 
-console.log(combined);
+// const combined = ages
+//         .map(age => age)
+//         .filter(age => age >= 40)
+//         .sort((a,b)=> a - b)
+//         .reduce((a, b) => a + b, 0)// Works this way as well .reduce((a,b) => a + b) without the 0 zero
+
+// console.log(combined);
+
+// const evenAges = ages
+//     .filter(age => age % 2 === 0)
+//     .sort((a,b) => a - b )
+
+// console.log(evenAges)
+
+
+
+
+
+
+//     let array = [
+//         { skill: 'css', user: 'Bill' },
+//         { skill: 'javascript', user: 'Chad' },
+//         { skill: 'javascript', user: 'Bill' },
+//         { skill: 'css', user: 'Sue' },
+//         { skill: 'javascript', user: 'Sue' },
+//         { skill: 'html', user: 'Sue' }
+//     ]; 
+    
+
+// const newArray = array.reduce(function(x, y){
+//     if (x.indexOf(y) < 0) x.push(y) + 1;
+//     return x;
+// },[]);
+// console.log(newArray)
+
+
+// [ what is expected
+//     { skill: 'css', users: ['Bill', 'Sue'], count: 2 },
+//     { skill: 'javascript', users: ['Chad', 'Bill', 'Sue'], count: 3 },
+//     { skill: 'html', users: ['Sue'], count: 1 }
+// ]
+
+
+
+// const newArray = array.map(function(arr){
+//     return true;
+
+// })
+
+// console.log(newArray)
+
+
+// var names = ["Mike", "Matt", "Nancy", "Adam", "Jenny", "Nancy", "Carl"];
+
+// var uniq = names.reduce(function (a, b) {
+//     if (a.indexOf(b) < 0) a.push(b);
+//     return a;
+// }, []);
+
+// console.log(uniq,names) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
+
+// one liner
+// return names.reduce(function (a, b) { if (a.indexOf(b) < 0) a.push(b); return a; }, []);
+
+
+function solve() {
+    var argument = Array.prototype.slice.call(arguments);
+    var a = 0, b = 0;
+    var alice = argument.splice(0, argument.length / 2);
+    var bob = argument.splice(0, argument.length);
+    for (i = 0; i < alice.length; i++) {
+        if (alice[i] > bob[i]) {
+            a++;
+        }
+        if (alice[i] < bob[i]) {
+            b++;
+        }
+    }
+    return [a, b];
+}
+
+console.log(solve())
