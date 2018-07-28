@@ -9,7 +9,7 @@ const companies = [
     { name: "Company Seve", category: "Retail", start: "1986", end: "1996" },
     { name: "Company Eight", category: "Finance", start: "1988", end: "2016" },
     { name: "Company Nine", category: "Technology", start: "1987", end: "1989" },
-    
+
 ];
 
 const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
@@ -24,7 +24,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 
 //For Each
-// companies.forEach(function(company){
+// const company = companies.forEach(function(company){
 // console.log(company.name);
 // });
 /*<------------------------------------------------------- End ForEach ---------------------------------->*/
@@ -35,7 +35,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 /*<------------------------------------------------------- Filter ---------------------------------->*/
 
-// Get 21 or older 
+// Get 21 or older
 // let canDrink = [];
 // for(let i = 0; i < ages.length; i++){
 //     if(ages[i] >= 21){
@@ -49,7 +49,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 //         return true;
 //     }
 // })
-
+// console.log(canDrink)
 
 //Filter ES6 //Get 21 or older
 // const canDrink = ages.filter(age => age >= 21);
@@ -70,8 +70,8 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 // console.log(RetailCompanies)
 
-// 
-// Filter ES6 Get 1980 Companies 
+//
+// Filter ES6 Get 1980 Companies
 // const eightiesCompanies = companies.filter(company => (company.start >= 1980 && company.start < 1990))
 // console.log(eightiesCompanies)
 
@@ -81,12 +81,12 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // console.log(lastedTenYears);
 
 
-/*<-------------------------------------------------- End Filter ---------------------------------->*/
+// /*<-------------------------------------------------- End Filter ---------------------------------->*/
 
 
 
 /*<------------------------------------------------------- Map ---------------------------------->*/
-//create an array of comany names 
+//create an array of comany names
 //ES5
 // const companyNames = companies.map(function(company){
 //     return company.name;
@@ -116,11 +116,11 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // const agesTimesTwo = ages.map(age => age * 2);
 // console.log(agesTimesTwo);
 
-//ES6 how to use map multiple times Square Root & Ages Array joined 
+//ES6 how to use map multiple times Square Root & Ages Array joined
 // const agesMap = ages
 //         .map(age => Math.sqrt(age))
 //         .map(age => age * 2)
-        
+
 // console.log(agesMap)
 /*<-------------------------------------------------------End Map ---------------------------------->*/
 
@@ -128,7 +128,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 /*<-------------------------------------------------------Sort ---------------------------------->*/
 
-//Sort ES5 
+//Sort ES5
 // const sortedCompanies = companies.sort(function(c1, c2){
 
 //     if(c1.category > c2.category){
@@ -166,7 +166,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 //Reduce
 
 
-//for loop example 
+//for loop example
 // var agesSum = 0;
 // for(let i = 0; i < ages.length; i++){
 //     agesSum += ages[i]
@@ -197,7 +197,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // },0);
 // console.log(totalYearsCompanies)
 
-//ES6Get total years for all companies 
+//ES6Get total years for all companies
 // const totalYearsCompanies = companies.reduce((total,company) => total +  (company.end - company.start),0)
 // console.log(totalYearsCompanies)
 /*<------------------------------------------------------- End Reduce ---------------------------------->*/
@@ -226,15 +226,62 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 
 
 
-//     let array = [
-//         { skill: 'css', user: 'Bill' },
-//         { skill: 'javascript', user: 'Chad' },
-//         { skill: 'javascript', user: 'Bill' },
-//         { skill: 'css', user: 'Sue' },
-//         { skill: 'javascript', user: 'Sue' },
-//         { skill: 'html', user: 'Sue' }
-//     ]; 
-    
+    // let array = [
+    //     { skill: 'css', user: 'Bill' },
+    //     { skill: 'javascript', user: 'Chad' },
+    //     { skill: 'javascript', user: 'Bill' },
+    //     { skill: 'css', user: 'Sue' },
+    //     { skill: 'javascript', user: 'Sue' },
+    //     { skill: 'html', user: 'Sue' }
+    // ];
+
+
+
+
+    // function userOrder(stack,name){
+        // let array = [
+        //     { skill: 'css', user: 'Bill' },
+        //     { skill: 'javascript', user: 'Chad' },
+        //     { skill: 'javascript', user: 'Bill' },
+        //     { skill: 'css', user: 'Sue' },
+        //     { skill: 'javascript', user: 'Sue' },
+        //     { skill: 'html', user: 'Sue' }
+        // ];
+        
+    //     let newArray = [];
+    //     for(let i = 0; i < array.length; i++){
+    //         if(newArray === array){
+    //             array.push(newArray[i])
+    //             return newArray;
+    //         }
+    //     }
+        
+    // }
+    // console.log(userOrder);
+
+
+
+// function newArray(item,index){
+//     var joinedArray = [item.skill, item.user].join(" ").replace();
+
+//     return joinedArray;
+
+// }
+// function myFunction() {
+//     document.getElementById("demo").innerHTML = array.map(newArray);
+// }
+
+// for (var i = 0; i < array.length; i++){
+   
+
+// console.log('run')
+    // const newArray = array.reduce(function(x,y){
+    //     if(x.indexOf(y) < 0) x.push(y);
+    //     return x; 
+    // },[]);
+                
+
+    // console.log(newArray)
 
 // const newArray = array.reduce(function(x, y){
 //     if (x.indexOf(y) < 0) x.push(y) + 1;
@@ -243,7 +290,7 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 // console.log(newArray)
 
 
-// [ what is expected
+// [   expected output
 //     { skill: 'css', users: ['Bill', 'Sue'], count: 2 },
 //     { skill: 'javascript', users: ['Chad', 'Bill', 'Sue'], count: 3 },
 //     { skill: 'html', users: ['Sue'], count: 1 }
@@ -266,26 +313,183 @@ const ages = [13, 45, 60, 24, 46, 27, 21, 25, 10, 11, 22, 17, 11, 19];
 //     return a;
 // }, []);
 
-// console.log(uniq,names) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
+// console.log(uniq,name) // [ 'Mike', 'Matt', 'Nancy', 'Adam', 'Jenny', 'Carl' ]
 
 // one liner
 // return names.reduce(function (a, b) { if (a.indexOf(b) < 0) a.push(b); return a; }, []);
 
 
-function solve() {
-    var argument = Array.prototype.slice.call(arguments);
-    var a = 0, b = 0;
-    var alice = argument.splice(0, argument.length / 2);
-    var bob = argument.splice(0, argument.length);
-    for (i = 0; i < alice.length; i++) {
-        if (alice[i] > bob[i]) {
-            a++;
-        }
-        if (alice[i] < bob[i]) {
-            b++;
-        }
-    }
-    return [a, b];
-}
+// function solve() {
+//     var argument = Array.prototype.slice.call(arguments);
+//     var a = 0, b = 0;
+//     var alice = argument.splice(0, argument.length / 2);
+//     var bob = argument.splice(0, argument.length);
+//     for (i = 0; i < alice.length; i++) {
+//         if (alice[i] > bob[i]) {
+//             a++;
+//         }
+//         if (alice[i] < bob[i]) {
+//             b++;
+//         }
+//     }
+//     return [a, b];
+// }
 
-console.log(solve())
+// console.log(solve())
+
+
+/////--------------------------------------------------------- paypal ------------------------------------------/
+[  
+    { skill: 'css', user: 'Bill' },
+    { skill: 'javascript', user: 'Chad' },
+    { skill: 'javascript', user: 'Bill' },
+    { skill: 'css', user: 'Sue' },
+    { skill: 'javascript', user: 'Sue' },
+    { skill: 'html', user: 'Sue' }
+]
+
+// [   //expected output
+//     { skill: 'css', users: ['Bill', 'Sue'], count: 2 },
+//     { skill: 'javascript', users: ['Chad', 'Bill', 'Sue'], count: 3 },
+//     { skill: 'html', users: ['Sue'], count: 1 }
+// ]
+
+// Answer to paypal using reduce
+
+const input = [{ skill: 'css', user: 'Bill' }, { skill: 'javascript', user: 'Chad' }, { skill: 'javascript', user: 'Bill' }, { skill: 'css', user: 'Sue' }, { skill: 'javascript', user: 'Sue' }, { skill: 'html', user: 'Sue' }]
+
+console.log(Object.values(
+    input.reduce((a, { skill, user }) => {
+        if (!a[skill]) a[skill] = { skill, users: [], count: 0 };
+        a[skill].users.push(user);
+        a[skill].count++;
+        return a;
+    }, {})
+));
+
+//Answer to paypal using map
+
+// var input = [{ skill: 'css', user: 'Bill' }, { skill: 'javascript', user: 'Chad' }, { skill: 'javascript', user: 'Bill' }, { skill: 'css', user: 'Sue' }, { skill: 'javascript', user: 'Sue' }, { skill: 'html', user: 'Sue' }],
+//     result = Array.from(
+//         input.reduce((m, { skill, user }) => m.set(skill, [...(m.get(skill) || []), user]), new Map),
+//         ([skill, users]) => ({ skill, users, count: users.length })
+//     );
+
+// console.log(result);
+
+let myUsers = [{
+        skill: 'css',
+        user: 'Bill'
+        }, {
+        skill: 'javascript',
+        user: 'Chad'
+        }, {
+        skill: 'javascript',
+        user: 'Bill'
+        }, {
+        skill: 'css',
+        user: 'Sue'
+        }, {
+        skill: 'javascript',
+        user: 'Sue'
+        }, {
+        skill: 'html',
+        user: 'Sue'
+    }]
+
+const groupedUsers = myUsers.reduce((x,{skill,user}) => {
+    if (!x[skill]) x[skill] = {
+        skill,
+        users: [],
+        count: 0
+    };
+    x[skill].users.push(user);
+    x[skill].count++;
+    return x;
+
+    }, {})
+console.log(groupedUsers);
+
+/////--------------------------------------------------------- paypal End------------------------------------------/
+
+// var myMaze = [
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [1, 1, 0, 1, 0, 0, 0, 0, 0, 0],
+//     [0, 1, 0, 1, 0, 0, 0, 1, 1, 2],
+//     [0, 1, 1, 1, 0, 1, 1, 1, 0, 0],
+//     [0, 0, 0, 1, 1, 1, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+//     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+// ];
+
+// var ms = new MazeSolver(myMaze)
+// ms.traverse(3, 0);
+
+
+// function MazeSolver(maze){
+    
+//     this.maze = maze;
+//     this.traverse = function(column, row) {
+//         if(this.maze[column][row] == 2){
+//             console.log("We solved the maze at " + column + ", " + row);
+//         }else if(this.maze[column][row] == 1){
+//             console.log("We are on a valid path");
+//             this.maze[column][row] = 0;
+//             if(column < this.maze.length - 1){
+//                     this.traverse(column + 1, row)
+//             }
+//             if(row < this.maze[column].length){
+//                     this.traverse(column, row + 1)
+//             }
+//             if(column > 0){
+//                     this.traverse(column -1, row);
+//             }
+//             if(row > 0){
+//                     this.traverse(column, row - 1)
+//             }
+//         }
+//     }
+
+// }
+
+
+
+// var testArray = [
+//     ['2011-08-01 20:46:04', 10, 40, 20, 20],//same time
+//     ['2011-08-01 20:46:04', 20, 45, 25, 70],
+
+//     ['2011-09-01 17:02:04', 20, 35, 15, 25],
+
+//     ['2012-10-01 16:55:44', 30, 30, 10, 30],//same time
+//     ['2012-10-01 16:55:44', 40, 45, 13, 23]
+// ],
+
+
+//     dictionary = {}, result = [];
+
+// testArray.forEach(function (element) {
+//     var time = element[0],
+//         currentValues = element.splice(1),
+//         storedValues;
+
+//     if (!dictionary[time]) {
+//         dictionary[time] = currentValues;
+//     }
+
+//     storedValues = dictionary[time];
+
+//     currentValues.forEach(function (currentElement, index) {
+//         storedValues[index] = (currentElement + storedValues[index]) / 2;
+//     })
+// });
+
+// for (var property in dictionary) {
+//     if (dictionary.hasOwnProperty(property)) {
+//         result.push([property].concat(dictionary[property]));
+//     }
+// }
+
+// console.log(result);
